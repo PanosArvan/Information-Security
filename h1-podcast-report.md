@@ -47,11 +47,11 @@ Using python.
 
 First I changed Hex to bytes:
 
-`hex_string = "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d"
-bytes_data = bytes.fromhex(hex_string)
+    `hex_string = "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d"
+    bytes_data = bytes.fromhex(hex_string)
 
-print("Hex string:", hex_string)
-print("Bytes data:", bytes_data)`
+    print("Hex string:", hex_string)
+    print("Bytes data:", bytes_data)`
 
 and got this result:
 
@@ -59,16 +59,16 @@ and got this result:
 
 Then I changed bytes to Base64:
 
-`import base64
+    `import base64
 
-hex_string = "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d"
-bytes_data = bytes.fromhex(hex_string)
+    hex_string = "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d"
+    bytes_data = bytes.fromhex(hex_string)
 
-base64_encoded = base64.b64encode(bytes_data).decode('utf-8')
+    base64_encoded = base64.b64encode(bytes_data).decode('utf-8')
 
-print("Hex string:", hex_string)
-print("Bytes data:", bytes_data)
-print("Base64 encoded:", base64_encoded)`
+    print("Hex string:", hex_string)
+    print("Bytes data:", bytes_data)
+    print("Base64 encoded:", base64_encoded)`
 
 In order to do that I had to add "import base64" and base64.b64encode.().decode() which was referenced from this site: [docs.python](https://docs.python.org/3/library/base64.html)
 
