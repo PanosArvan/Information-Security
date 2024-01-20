@@ -29,3 +29,14 @@
 ## Sources
 
 [EP 1: THE PHREAKY WORLD OF PBX HACKING](https://darknetdiaries.com/transcript/1/)
+
+
+# Installing Debian
+
+I followed the installation guide. Karvinen 2021: [Install Debian on VirtualBox](https://terokarvinen.com/2021/install-debian-on-virtualbox/)
+
+I didn't encounter an error. I chose Debian 64 bit before hand to avoid the first error that would usually appear.
+
+This is the result of the Debian desktop after getting all the updates and installing Guest Additions.
+
+![Screenshot of my Debian](https://github.com/PanosArvan/Information-Security/assets/145275148/14a88319-f3bf-46a9-94c7-6c13f25a7db6)
