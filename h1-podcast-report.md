@@ -74,4 +74,9 @@ In order to do that I had to add "import base64" and base64.b64encode.().decode(
 
 The "print("Bytes data:", bytes_data)" line is unneccessary but I chose to keep it to see the middle input also.
 
+And this is the final result:
+
+![image](https://github.com/PanosArvan/Information-Security/assets/145275148/b6f81b3d-6243-4798-b587-a0f3a7367f5c)
+
+
 [ChatGPT](https://chat.openai.com/) was also used to get an idea of how to proceed as posts in forums had many variations on how to proceed. I found python to somehow be simpler.
