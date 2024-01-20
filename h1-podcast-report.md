@@ -40,3 +40,38 @@ I didn't encounter an error. I chose Debian 64 bit before hand to avoid the firs
 This is the result of the Debian desktop after getting all the updates and installing Guest Additions.
 
 ![Screenshot of my Debian](https://github.com/PanosArvan/Information-Security/assets/145275148/14a88319-f3bf-46a9-94c7-6c13f25a7db6)
+
+# Challenge at Cryptopals - 01 - Hex to Base64
+
+Using python.
+
+First I changed Hex to bytes:
+
+`hex_string = "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d"
+bytes_data = bytes.fromhex(hex_string)
+
+print("Hex string:", hex_string)
+print("Bytes data:", bytes_data)`
+
+and got this result:
+
+![Screenshot 2024-01-20 144322](https://github.com/PanosArvan/Information-Security/assets/145275148/2506e694-dbab-42e8-a70c-bf21eab0adfe)
+
+Then I changed bytes to Base64:
+
+`import base64
+
+hex_string = "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d"
+bytes_data = bytes.fromhex(hex_string)
+
+base64_encoded = base64.b64encode(bytes_data).decode('utf-8')
+
+print("Hex string:", hex_string)
+print("Bytes data:", bytes_data)
+print("Base64 encoded:", base64_encoded)`
+
+In order to do that I had to add "import base64" and base64.b64encode.().decode() which was referenced from this site: [docs.python](https://docs.python.org/3/library/base64.html)
+
+The "print("Bytes data:", bytes_data)" line is unneccessary but I chose to keep it to see the middle input also.
+
+[ChatGPT](https://chat.openai.com/) was also used to get an idea of how to proceed as posts in forums had many variations on how to proceed. I found python to somehow be simpler.
