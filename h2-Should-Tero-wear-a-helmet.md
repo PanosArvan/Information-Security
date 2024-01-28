@@ -77,15 +77,15 @@ Assets:
 - Technology Infrastructure: Systems, servers, and networks necessary for conducting cybersecurity assessments and managing internal operations.
 - Financial Assets: The monetary value associated with the company's contracts, revenue, and financial transactions.
 
-** Prioritization: **
+**Prioritization:**
 
 Prioritizing these assets is essential. While all assets have significance, customer data and the company's reputation are crown jewels. A compromise in either could lead to severe consequences for the business and disdain to the shareholders.
 
-** Security Supporting Business: **
+**Security Supporting Business:**
 
 In the cybersecurity industry, the reputation of being secure is paramount. Clients trust CyberGuard Solutions to protect their assets, and any breach could not only result in financial loss but also damage the company's credibility.
 
-** Diagram of Company Systems: **
+**Diagram of Company Systems:**
 (See attached diagram)
 
 Description:
