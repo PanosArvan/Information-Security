@@ -65,22 +65,27 @@ More advanced would be:
 
 1) What are we working on?
 
-Imagine "CyberGuard Solutions," an imaginary company that specializes in providing cybersecurity services to a wide range of clients. The company offers services such as penetration testing, vulnerability assessments, and security consulting. The business relies on a robust IT infrastructure to deliver its services, manage client data securely, and maintain its reputation in the cybersecurity industry.
+"CyberDefense Integration (CDI)," specializes in providing cybersecurity services to a wide range of clients. The company offers services such as penetration testing, vulnerability assessments, and security consulting. The business relies on a robust IT infrastructure to deliver its services, manage client data securely, and maintain its reputation in the cybersecurity industry.
 
 Assets:
 
-Client Data: Sensitive information about clients, including business strategies, intellectual property, and potentially confidential details about their own security measures.
-Company Reputation: The trust and credibility established in the cybersecurity domain, crucial for acquiring new clients and retaining existing ones.
-Employee Information: Personal and professional details of the company's employees, including credentials and personal identification information.
-Technology Infrastructure: Systems, servers, and networks necessary for conducting cybersecurity assessments and managing internal operations.
-Financial Assets: The monetary value associated with the company's contracts, revenue, and financial transactions.
-Prioritization:
-Prioritizing these assets is essential. While all assets have significance, customer data and the company's reputation are crown jewels. A compromise in either could lead to severe consequences for the business.
+- Client Data: Sensitive information about clients, including business strategies, intellectual property, and potentially confidential details about their own security measures.
 
-Security Supporting Business:
+- Company Reputation: The trust and credibility established in the cybersecurity domain, crucial for acquiring new clients and retaining existing ones.
+
+- Employee Information: Personal and professional details of the company's employees, including credentials and personal identification information.
+- Technology Infrastructure: Systems, servers, and networks necessary for conducting cybersecurity assessments and managing internal operations.
+- Financial Assets: The monetary value associated with the company's contracts, revenue, and financial transactions.
+
+** Prioritization: **
+
+Prioritizing these assets is essential. While all assets have significance, customer data and the company's reputation are crown jewels. A compromise in either could lead to severe consequences for the business and disdain to the shareholders.
+
+** Security Supporting Business: **
+
 In the cybersecurity industry, the reputation of being secure is paramount. Clients trust CyberGuard Solutions to protect their assets, and any breach could not only result in financial loss but also damage the company's credibility.
 
-Diagram of Company Systems:
+** Diagram of Company Systems: **
 (See attached diagram)
 
 Description:
