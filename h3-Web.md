@@ -83,9 +83,15 @@ Attack scenarios:
 
 - Application constructs a vulnerable SQL call.
 
-    'String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";'
+    String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";
 
 Attacker can modify the 'id' parameter to execute unauthorized actions.
+
+- Application's blind trust in frameworks leads to vulnerable queries, e.g., Hibernate Query Language (HQL).
+
+    Query HQLQuery = session.createQuery("FROM accounts WHERE custID='" + request.getParameter("id") + "'");
+  
+Attacker manipulates 'id' parameter in the URL to execute malicious actions, such as: http://example.com/app/accountView?id=' UNION SELECT SLEEP(10);--'
 
 
 ## Webgoat 2023.4: General: Developer tools
