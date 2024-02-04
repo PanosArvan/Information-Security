@@ -1,12 +1,91 @@
 # OWASP: OWASP 10 2021
 
+### A05 Security Misconfiguration
+
+From :[A05 Security Misconfiguration](https://owasp.org/Top10/A05_2021-Security_Misconfiguration/)
+
+Here there are listed reasons why an application might be vulnerable such as:
+
+- Security hardening is missing across any part of the application stack
+- Cloud Service permissions are improperly configured
+- Uneccessary features are enabled
+
+Systems are at higher risk without a repeatable application security configuration process.
+
+Ways to prevent:
+
+- Implement secure installation processes
+- Use a repeatable hardening process for identical configuration in development
+- Deploy a minimal platform without unnecessary features or components
+- Review and update regurarly the configurations
+- Implement a segmented application architecture for secure separation between components or tenants
+- Use securit headers and automate the verification of configurations in all environments
+
+Attack scenarios:
+
+- Cloud service provider's default sharing permissions expose sensitive data stored within cloud storage to other users on the internet
+- Directory listing not disable on the server, which allows an attacker to access and exploit a flaw in the application
+- Application server configuration allows detailed error messages, exposing sensitive information
+- Sample application with security flaws left on the production server, which allows an attacker to compromise the server by exploiting default accounts and passwords
 
 
+### A06 Vulnerable and Outdated Components
+
+From: [A06 Vulnerable and Outdated Components](https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/)
+
+Vulnerable components category is difficult to test and assess risk.
+
+Vulnerability can arise from:
+
+- Being unaware of all components, including direct and nested dependencies
+- Software is outdated or unsupported
+- Lack of regural vulnerability scans and subscription to security bulletins
+- Failure to fix or upgrade underlying platforms, frameworks and dependencies in a timely fashion
+- Lack of compatibility testing for updated, upgraded or patched libraries
+- Inadequate seecuriy for components' configurations
+
+Ways to prevent issues:
+
+- Remove unused dependencies, unnecessary features, components, files and documentation
+- Obtain components only from official sources over secure links
+- Prefer signed packages to reduce the risk of including modified, malicious components
+- Monitor and address issues with unmaintained or insecure components
+- Use software composition analysis tools and subscribe to alerts for security vulnerabilities
+- Monitor Common Vulnerabilities and Exposures (CVE) and National Vulnerability Database (NVD) usage
+
+Attack scenarios:
+Components running with the same priviliges as the applicatioin result in serious impact flaws:
+
+- A Struts 2 remote code execution vulnerability
+- IoT devices can have critical vulnerabilties
+- Automated tools like Shodan IoT search engine used to find unpatched or misconfigured systems (Heartbleed vulnerability)
 
 
+### A03 Injection
 
+94% of applications tested for injection had a max incidence rate of 19%, average incident rate of 3% and 274k occurrences.
 
+An application becomes susceptible to attacks under the following conditions:
 
+- The application fails to validate, filter, or sanitize user-supplied data
+- Dynamic queries or non-parameterized calls are utilized in the interpreter without context-aware escaping
+- Object-relational mapping (ORM) search parameters incorporate hostile data, leading to the extraction of additional sensitive records
+- Malicious data is either directly used or concatenated in dynamic queries, commands, or stored procedures, compromising the structure of SQL or command and posing a security threat
+
+To prevent injection, it is crucial to maintain a separation between data and commands/queries. The recommended approaches include:
+
+- Utilize a secure API
+- Implement positive server-side input validation
+- For any remaining dynamic queries, employ escape syntax
+- Incorporate SQL controls such as LIMIT
+
+Attack scenarios:
+
+- Application constructs a vulnerable SQL call.
+
+'''String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";'''
+
+Attacker can modify the 'id' parameter to execute unauthorized actions.
 
 
 ## Webgoat 2023.4: General: Developer tools
