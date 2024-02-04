@@ -83,7 +83,7 @@ Attack scenarios:
 
 - Application constructs a vulnerable SQL call.
 
-'''String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";'''
+    'String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";'
 
 Attacker can modify the 'id' parameter to execute unauthorized actions.
 
