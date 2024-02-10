@@ -1,6 +1,6 @@
 # ETAOIN
 
-## € [Schneier 2015: Applied Cryptography: Chapter 1: Foundations](https://learning.oreilly.com/library/view/applied-cryptography-protocols/9781119096726/08_chap01.html#chap01-sec001)
+## [Schneier 2015: Applied Cryptography: Chapter 1: Foundations](https://learning.oreilly.com/library/view/applied-cryptography-protocols/9781119096726/08_chap01.html#chap01-sec001)
 
 ### 1.1 Terminology
 
