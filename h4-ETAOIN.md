@@ -14,7 +14,7 @@ On the asymmetric one the keys are different. The encryption key is public and t
 
 ### 1.2 Steganography
 
-
+ad
 
 ### 1.3 Substitution Ciphers and Transposition Ciphers
 
