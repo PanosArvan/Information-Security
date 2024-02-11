@@ -54,39 +54,75 @@ Here the author refers to significantly large numbers that he uses to navigate a
 
 I use Windows PowerShell to encrypt and decrypt files using AES encryption. PowerShell provides access to .NET Framework classes, including cryptographic functions, making it suitable for this task.
 
-At first this is coded in PowerShell:
+At first this is coded in PowerShell to define encrypted and decrypted file paths and then to encrypt and get the encryption key for the decryption:
 
-`# Define the path to the file to encrypt
-$fileToEncrypt = "C:\Users\panar\OneDrive - Haaga-Helia Oy Ab\Documents\Folder to be encrypted\file.txt"
+    $fileToEncrypt = "C:\Users\panar\OneDrive - Haaga-Helia Oy Ab\Documents\Folder to be encrypted\file.txt"
+    $encryptedFile = "C:\Users\panar\OneDrive - Haaga-Helia Oy Ab\Documents\Folder to be encrypted\encrypted_file.enc"
+    $encryptionKey = [System.Security.Cryptography.Aes]::Create().Key
+    $fileContent = Get-Content -Path $fileToEncrypt -Encoding Byte
+    $aes = [System.Security.Cryptography.Aes]::Create()
+    $aes.Key = $encryptionKey
+    $aes.IV = $aes.Key
+    $memoryStream = New-Object System.IO.MemoryStream
+    $cryptoStream = New-Object System.Security.Cryptography.CryptoStream $memoryStream, $aes.CreateEncryptor(), "Write"
+    $cryptoStream.Write($fileContent, 0, $fileContent.Length)
+    $cryptoStream.FlushFinalBlock()
+    [System.IO.File]::WriteAllBytes($encryptedFile, $memoryStream.ToArray())
+    $memoryStream.Close()
+    $cryptoStream.Close()
+    Write-Host "Encryption Key:" $([System.Convert]::ToBase64String($encryptionKey))
 
-# Define the path for the encrypted file
-$encryptedFile = "C:\Users\panar\OneDrive - Haaga-Helia Oy Ab\Documents\Folder to be encrypted\encrypted_file.enc"
+This generated this:
 
-# Generate a random encryption key
-$encryptionKey = [System.Security.Cryptography.Aes]::Create().Key
+![encrypted key](https://github.com/PanosArvan/Information-Security/assets/145275148/1ad3b13a-fd29-4163-aa60-7309b1bed1fa)
 
-# Get the file content
-$fileContent = Get-Content -Path $fileToEncrypt -Encoding Byte
+Secondly, we run this to decrypt the previous one using the encryption key that we just had generated:
 
-# Create a new AES encryptor object
-$aes = [System.Security.Cryptography.Aes]::Create()
-$aes.Key = $encryptionKey
-$aes.IV = $aes.Key
+    # Define the path to the encrypted file
+    $encryptedFile = "C:\Users\panar\OneDrive - Haaga-Helia Oy Ab\Documents\Folder to be encrypted\encrypted_file.enc"
 
-# Create a memory stream for encryption
-$memoryStream = New-Object System.IO.MemoryStream
-$cryptoStream = New-Object System.Security.Cryptography.CryptoStream $memoryStream, $aes.CreateEncryptor(), "Write"
+# Define the path for the decrypted file
+    $decryptedFile = "C:\Users\panar\OneDrive - Haaga-Helia Oy Ab\Documents\Folder to be encrypted\decrypted_file.txt"
 
-# Encrypt the file content
-$cryptoStream.Write($fileContent, 0, $fileContent.Length)
-$cryptoStream.FlushFinalBlock()
+    # Prompt for the encryption key
+    $encryptionKeyBase64 = Read-Host -Prompt "Enter encryption key (Base64)"
 
-# Write the encrypted content to the encrypted file
-[System.IO.File]::WriteAllBytes($encryptedFile, $memoryStream.ToArray())
+    # Decode the encryption key from Base64
+    $encryptionKey = [System.Convert]::FromBase64String($encryptionKeyBase64)
 
-# Close streams
-$memoryStream.Close()
-$cryptoStream.Close()
+    # Read the encrypted file content
+    $encryptedContent = [System.IO.File]::ReadAllBytes($encryptedFile)
 
-# Display encryption key (for decryption)
-Write-Host "Encryption Key:" $([System.Convert]::ToBase64String($encryptionKey))`
+    # Create a new AES decryptor object
+    $aes = [System.Security.Cryptography.Aes]::Create()
+    $aes.Key = $encryptionKey
+    $aes.IV = $aes.Key
+
+    # Create a memory stream for decryption
+    $memoryStream = New-Object System.IO.MemoryStream($encryptedContent)
+    $cryptoStream = New-Object System.Security.Cryptography.CryptoStream $memoryStream, $aes.CreateDecryptor(), "Read"
+
+    # Decrypt the content
+    $decryptedContent = New-Object byte[] $encryptedContent.Length
+    $cryptoStream.Read($decryptedContent, 0, $decryptedContent.Length)
+
+    # Write the decrypted content to the decrypted file
+    [System.IO.File]::WriteAllBytes($decryptedFile, $decryptedContent)
+
+    # Close streams
+    $memoryStream.Close()
+    $cryptoStream.Close()
+
+    Write-Host "Decryption successful. Decrypted file saved to:" $decryptedFile
+
+And from the decryption script we get this:
+
+![decrypted key](https://github.com/PanosArvan/Information-Security/assets/145275148/d44e920f-a2c9-41a0-8a67-3c25945ce35f)
+
+and these files have been created in the folder:
+
+![encrypted decrypted_folders](https://github.com/PanosArvan/Information-Security/assets/145275148/47257ecc-3e8b-49b0-a9df-ad8d65be9df0)
+
+- In the encryption script, we generate a random encryption key using the AES algorithm. We read the content of the file to encrypt, create an AES encryptor object, encrypt the content, and write the encrypted content to a new file. We also display the encryption key for decryption.
+
+- In the decryption script, we prompt the user to enter the encryption key. We decode the encryption key from Base64, read the encrypted content from the file, create an AES decryptor object, decrypt the content, and write the decrypted content to a new file.
