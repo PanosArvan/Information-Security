@@ -49,6 +49,79 @@ Most common cryptographic algorithms:
 
 Here the author refers to significantly large numbers that he uses to navigate around examples in the rest of the book.
 
+## [[Disobey 2023] Techniques observed in security breaches and defending against them - Jouni Mikkola](https://www.youtube.com/watch?v=9E3-h54zAR8)
+
+The presenter talks about three real life security breaches. Part of the techniques observed and the way those incidents could have been prevented.
+
+### Mitre ATT&CK
+
+It's comprised of 14 different tactics:
+
+1. Reconnaissance
+2. Resource Development
+3. Initial Access
+4. Execution
+5. Persistence
+6. Privilege Escalation
+7. Defense Evation
+8. Credential Access
+9. Discovery
+10. Lateral Movement
+11. Collection
+12. Command and Control
+13. Exfiltration
+14. Impact
+
+You can be jumping from one tactic to another. Order is not necessary.
+
+### Close Call
+
+It started with resource development. The attacker steals the credentials. Potentialy a victim of a phishing attack.
+The attacker gains access to a remote access server. They launch a malware cobalstrike. They moved to a powershell based threat.
+The malware tries to bypass AMSI. They gain access to several user accounts, then laterally move to all domain devices. Only local admin privileges were gain so very few systems were infiltrated.
+The attacker gained access to a list of user accounts and passwords. Also to publicly available VPN-services using those credentials.
+Huge possibility it was an insider threat. Can't be proved.
+
+Discovery Scams
+
+The attacker launched discovery attacks to find devices within the network. Used RDP to laterally move within the network. Then gained access to tens of GBs of business data, which was exfiltrated.
+Then the environment encrypted. Luckily due to low level access wasn't fully encrypted.
+
+### Wildfire
+
+The attacker gained public domain access to a publicly available VPN service.
+The malware was delivered through SFTP/PDP. 100s GBs of data were exfiltrated. 
+The whole environment was encrypted with backups.
+The company tried to negotiate with the ransomware attacker. Something that is usually not recommended.
+
+### Similarities
+
+Identity: Access to working user accounts.
+Lateral movement.
+Malware.
+
+### Protecting the identiy
+
+- MFA
+- User training against phishing
+- Principle of lowes privilege. The user accounts should have least amount of required privileges.
+
+### Preventing lateral movement
+
+- Tier 0 | Domain controllers, management servers for tier 0 management.
+- Tier 1 | Servers
+- Tier 2 | Users and workstations
+
+LAPS: Local Admin Password Solution
+
+Firewall: Block inbound access on workstations
+
+### Malware prevention
+
+- Antivirus
+- Whitelisting
+- PowerShell: Only allow on per need basis
+- Attack Surface Reduction.
 
 ## Encryption - Decryption through AES and PowerShell
 
