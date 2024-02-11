@@ -48,3 +48,45 @@ Most common cryptographic algorithms:
 ### 1.7 Large Numbers
 
 Here the author refers to significantly large numbers that he uses to navigate around examples in the rest of the book.
+
+
+## Encryption - Decryption through AES and PowerShell
+
+I use Windows PowerShell to encrypt and decrypt files using AES encryption. PowerShell provides access to .NET Framework classes, including cryptographic functions, making it suitable for this task.
+
+At first this is coded in PowerShell:
+
+`# Define the path to the file to encrypt
+$fileToEncrypt = "C:\Users\panar\OneDrive - Haaga-Helia Oy Ab\Documents\Folder to be encrypted\file.txt"
+
+# Define the path for the encrypted file
+$encryptedFile = "C:\Users\panar\OneDrive - Haaga-Helia Oy Ab\Documents\Folder to be encrypted\encrypted_file.enc"
+
+# Generate a random encryption key
+$encryptionKey = [System.Security.Cryptography.Aes]::Create().Key
+
+# Get the file content
+$fileContent = Get-Content -Path $fileToEncrypt -Encoding Byte
+
+# Create a new AES encryptor object
+$aes = [System.Security.Cryptography.Aes]::Create()
+$aes.Key = $encryptionKey
+$aes.IV = $aes.Key
+
+# Create a memory stream for encryption
+$memoryStream = New-Object System.IO.MemoryStream
+$cryptoStream = New-Object System.Security.Cryptography.CryptoStream $memoryStream, $aes.CreateEncryptor(), "Write"
+
+# Encrypt the file content
+$cryptoStream.Write($fileContent, 0, $fileContent.Length)
+$cryptoStream.FlushFinalBlock()
+
+# Write the encrypted content to the encrypted file
+[System.IO.File]::WriteAllBytes($encryptedFile, $memoryStream.ToArray())
+
+# Close streams
+$memoryStream.Close()
+$cryptoStream.Close()
+
+# Display encryption key (for decryption)
+Write-Host "Encryption Key:" $([System.Convert]::ToBase64String($encryptionKey))`
