@@ -81,7 +81,7 @@ Secondly, we run this to decrypt the previous one using the encryption key that 
     # Define the path to the encrypted file
     $encryptedFile = "C:\Users\panar\OneDrive - Haaga-Helia Oy Ab\Documents\Folder to be encrypted\encrypted_file.enc"
 
-# Define the path for the decrypted file
+    # Define the path for the decrypted file
     $decryptedFile = "C:\Users\panar\OneDrive - Haaga-Helia Oy Ab\Documents\Folder to be encrypted\decrypted_file.txt"
 
     # Prompt for the encryption key
