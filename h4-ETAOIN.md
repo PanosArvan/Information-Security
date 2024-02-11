@@ -14,19 +14,28 @@ On the asymmetric one the keys are different. The encryption key is public and t
 
 ### 1.2 Steganography
 
-ad
+Steganography hides secret messages within innocuous ones, employing historical methods like invisible inks or modern techniques like embedding messages within graphic images by altering the least significant bits. This allows for large messages to be hidden inconspicuously. Additionally, Peter Wayner's mimic functions alter messages to resemble other types of content, potentially evading detection by automated scanning systems.
 
 ### 1.3 Substitution Ciphers and Transposition Ciphers
 
+Cryptography, in its historical context, primarily involved character-based algorithms, where characters were substituted or transposed within plaintext to generate ciphertext. While modern cryptography operates on bits instead of characters, the underlying principles of substitution and transposition remain.
 
+Substitution ciphers replace plaintext characters with corresponding ciphertext characters. Variants include simple substitution, where each character maps to one ciphertext character; homophonic substitution, where one plaintext character can map to several ciphertext characters; polygram substitution, which encrypts characters in groups; and polyalphabetic substitution, composed of multiple simple substitution ciphers using different keys.
+
+Transposition ciphers maintain the same characters but rearrange their order. Columnar transposition is a common example. Cryptanalysis of these ciphers often involves frequency analysis or other techniques to deduce the original plaintext.
+
+Rotor machines, like the Enigma used in World War II, automated encryption through mechanical wheels wired to perform substitution. Each rotor performs a simple substitution, and their configurations change dynamically during encryption, adding complexity to the cipher. Despite their complexity, rotor machines were eventually broken through cryptanalysis.
+
+While classical cryptography laid the groundwork for modern techniques, including those used in computer security, modern cryptography typically involves more complex algorithms operating on bits rather than characters.
 
 ### 1.4 Simple XOR
 
 
+XOR encryption, a basic bitwise operation, is often used in commercial software but offers minimal security. It involves XORing plaintext with a keyword to generate ciphertext. However, XOR encryption is easily breakable, even without computers. By analyzing coincidences, the key length can be determined, allowing for decryption. Despite its prevalence, XOR encryption should not be relied upon for robust security measures.
 
 ### 1.5 One-Time Pads
 
-
+The one-time pad encryption scheme, developed in 1917, offers perfect security by using a nonrepeating set of truly random key letters to encrypt plaintext. Each key letter is used only once, ensuring security. However, key generation must be truly random, and keys must never be reused. While highly secure, one-time pads are impractical for large data transmissions due to key length requirements and require perfect synchronization between sender and receiver. Despite limitations, they find use in ultra-secure, low-bandwidth channels.
 
 ### 1.6 Computer Algorithms
 
