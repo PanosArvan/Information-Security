@@ -1,6 +1,6 @@
 # [€ Schneier 2015: Applied Cryptography](https://learning.oreilly.com/library/view/applied-cryptography-protocols/9781119096726/10_chap02.html#chap02-sec003)
 
-## 2.3 ONE-WAY FUNCTIONS
+### 2.3 ONE-WAY FUNCTIONS
 
 One-way functions characteristics:
 
@@ -9,7 +9,7 @@ One-way functions characteristics:
 - In their simple form they are not useful for cryptography as you can only encrypt but not decrypt.
 - The trapdoor one-way function though, can be used for cryptography as it allows, through the use of the secret trapdoor, to decrypt the message with ease.
 
-## 2.4 ONE-WAY HUSH FUNCTIONS
+### 2.4 ONE-WAY HUSH FUNCTIONS
 
 - One-way has values are fundamental in modern cryptography.
 - They compress variable-length input strings into fixed-length output strings, providing a "fingerprint" of the original data.
