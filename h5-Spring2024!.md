@@ -69,5 +69,74 @@ And the result is: February. It is also showing the previous hash search. Quite 
 
 ## Password Managers
 
-Source: ![National Cybersecurity Alliance](https://staysafeonline.org/online-safety-privacy-basics/password-managers/)
+Source: [National Cybersecurity Alliance](https://staysafeonline.org/online-safety-privacy-basics/password-managers/)
+[Tero Karvinen h5 Spring 2024!](https://terokarvinen.com/2024/information-security-2024-spring/#h5-spring2024)
+Here is a list of a few password managers as recommended by many online sources:
+
+- Keeper
+- Bitwarden
+- 1Password
+- NordPass
+- Dashlane
+- LastPass
+- pass
+- KeePassXC
+
+### Information regarding Password Managers
+
+Threats it Protects Against:
+
+- Password Theft:
+
+KeePassXC protects against password theft by securely storing all passwords in an encrypted database, making it difficult for attackers to access them.
+Phishing Attacks: It helps users avoid falling victim to phishing attacks by allowing them to generate strong, unique passwords for each website, reducing the risk of credentials being compromised.
+Keylogging: KeePassXC can mitigate the risk of keylogging attacks by offering a feature to auto-type passwords into websites, bypassing the need for manual typing.
+Brute Force Attacks: It utilizes strong encryption algorithms and key derivation functions to make it computationally expensive for attackers to crack passwords through brute force.
+
+- Encrypted Information:
+
+KeePassXC encrypts all sensitive information stored in its database, including passwords, usernames, notes, and other metadata associated with each entry.
+Non-encrypted information typically includes the entry titles and group names.
+
+- License:
+
+KeePassXC is licensed under the GNU General Public License (GPL) version 2.0 or later. This license allows users to use, modify, and distribute the software freely, provided they adhere to the terms of the license, such as maintaining the copyright notice and sharing any modifications under the same license.
+
+- Data Storage:
+
+By default, KeePassXC stores the encrypted database locally on the user's device, whether it's a computer, smartphone, or other compatible device.
+Users have full control over where they choose to store the database file, whether it's on their local hard drive, an external drive, or a cloud storage service.
+
+- Data Protection:
+
+KeePassXC employs strong encryption algorithms such as AES (Advanced Encryption Standard) to protect the contents of its database.
+The database is secured with a master password, key file, or both, adding an additional layer of security.
+Additionally, KeePassXC offers features like two-factor authentication (2FA) integration and secure clipboard handling to further enhance data protection.
+
+
+### Use of Password Manager
+
+I decided to trust Tero Karvinen's recommendation for password manager, so I went with KeePassXC.
+
+First step was to download it following the directions from the website [KeePassXC](https://keepassxc.org/)
+
+![keepassXC1](https://github.com/PanosArvan/Information-Security/assets/145275148/1a9a0821-6b52-4f9b-a7f5-0a933055c1be)
+
+![keepassXC2](https://github.com/PanosArvan/Information-Security/assets/145275148/d977a83f-aace-48e4-bcd1-3f5c00df6ab2)
+
+![keepassXC3](https://github.com/PanosArvan/Information-Security/assets/145275148/12e68287-4287-446b-ab57-ba9d3cfb6c0a)
+
+And here it is opened:
+
+![keepassXC4](https://github.com/PanosArvan/Information-Security/assets/145275148/3f96a7d2-6768-46e5-9c36-b81f2c10ea67)
+
+![keepassXC5](https://github.com/PanosArvan/Information-Security/assets/145275148/63d968c7-1d9a-4788-8ca2-55c4114c0987)
+
+First I can create a new database and go through some of the options available regarding security, the best options are mostly used:
+
+
+
+
+
+
 
