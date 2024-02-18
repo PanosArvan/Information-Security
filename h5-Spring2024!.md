@@ -132,11 +132,38 @@ And here it is opened:
 
 ![keepassXC5](https://github.com/PanosArvan/Information-Security/assets/145275148/63d968c7-1d9a-4788-8ca2-55c4114c0987)
 
-First I can create a new database and go through some of the options available regarding security, the best options are mostly used:
+Now I can create a new database and go through some of the options available regarding security, the best options are mostly used:
 
+![keepassXC6-1](https://github.com/PanosArvan/Information-Security/assets/145275148/1ac1be60-92ea-4863-b546-2050205ff6ed)
 
+![keepassXC6](https://github.com/PanosArvan/Information-Security/assets/145275148/dcf2cf19-87ea-4c93-a045-e1d758d782f5)
 
+Decryption time and database format, latest for best security:
 
+![keepassXC7](https://github.com/PanosArvan/Information-Security/assets/145275148/1fa75810-c42f-4746-b34d-244aa48183cb)
 
+More advanced options like encryption algorithm, in this case AES256 was used:
 
+![keepassXC8](https://github.com/PanosArvan/Information-Security/assets/145275148/e0b7a16e-2e90-45b9-9d62-f52ec9b9d914)
 
+And some extra levels of protections, such as password and generated password, as well as a key file for additional security:
+
+![keepassXC9](https://github.com/PanosArvan/Information-Security/assets/145275148/6506920c-cdec-4443-b8fe-0d4e0baf7d6d)
+
+Afterwards we can add a new entry for a specific wlocation we need the password saved:
+
+![keepassXC10](https://github.com/PanosArvan/Information-Security/assets/145275148/c61b4b80-eb50-4793-9f54-7ac248a36b96)
+
+![keepassXC11](https://github.com/PanosArvan/Information-Security/assets/145275148/a83224ae-fe99-4e2c-a517-3432bbf7f553)
+
+So now I get a result looking like this:
+
+![keepassXC12](https://github.com/PanosArvan/Information-Security/assets/145275148/abe62fca-62d4-414a-baa9-a0113a80bb2d)
+
+Then there is the password generator:
+
+![keepassXC13](https://github.com/PanosArvan/Information-Security/assets/145275148/af574297-13e5-4a0e-8187-1cb372b0aabb)
+
+Where you get options for a randomly generated password of high quality:
+
+![keepassXC14](https://github.com/PanosArvan/Information-Security/assets/145275148/0a2fa8b6-0860-4a9d-a366-c331384b27e2)
