@@ -14,35 +14,35 @@ Summary:
 
 ## [Shavers & Bair 2016: Hiding Behind the Keyboard: The Tor Browser €](https://learning.oreilly.com/library/view/hiding-behind-the/9780128033524/XHTML/B9780128033401000021/B9780128033401000021.xhtml#s0010)
 
-- **Abstract**
+**Abstract**
 
 - The Tor Browser, or "Tor," enables anonymous Internet communication.
 - It anonymizes users, making tracking or identifying them difficult.
 - Forensic analysis may not uncover communication but can yield valuable artifacts.
 
-- **Keywords**
+**Keywords**
 
 - Anonymizing, Anonymous, Communication, Covert, E-mail, Forensic analysis, Internet browsing, Naval Research, Tails, The Onion Router, Tor, Virtual private network
 
-- **Introduction**
+**Introduction**
 
 - Tor is a modified Firefox browser hiding users' IP addresses.
 - It allows easy and effective anonymity for anyone.
 - Tor facilitates anonymous Internet surfing and communication.
 
-- **History and Intended Use of The Onion Router**
+**History and Intended Use of The Onion Router**
 
 - Tor's purpose is to enable anonymous Internet communication.
 - It has diverse applications, including bypassing government blocks and facilitating whistleblowing.
 - Tor, initially developed by the US government, is now open for improvements by various entities.
 
-- **Two Ways of Looking at The Onion Router**
+**Two Ways of Looking at The Onion Router**
 
 - Tor presents challenges for forensic analysis due to its unique nature.
 - It can be examined forensically on devices or as currently used by suspects.
 - The analysis focuses on Windows but applies to other operating systems.
 
-- **How The Onion Router Works**
+**How The Onion Router Works**
 
 - Tor routes Internet traffic through random relays, encrypting it.
 - Data passes through entry, middle, and exit relays, with each layer of encryption stripped at each relay.
@@ -54,7 +54,7 @@ Summary:
 - An analogy of Tor is mailing a letter through intermediaries, with each layer representing encryption.
 - The name "The Onion Router" reflects how data passes through layers of encryption, like peeling an onion.
 
-- **A Few Important Points About Tor**
+**A Few Important Points About Tor**
 
 - Tor's network of relays is operated by volunteers, enhancing anonymity.
 - The number of Tor users worldwide exceeds 750,000, utilizing over 6000 relays.
@@ -63,7 +63,7 @@ Summary:
 - The middle relay in a Tor circuit remains unknown to both the origin and destination, reducing suspicion.
 - Bridges, unlike public relays, are not listed publicly, making them difficult to block in countries with Internet censorship.
 
-- **From a Tor User’s Perspective**
+**From a Tor User’s Perspective**
 
 - The Tor browser is a modified Firefox browser, requiring minimal technical skill to use.
 - Installing the Tor browser bundle is simple, requiring about 10 mouse clicks and 10 minutes.
@@ -71,19 +71,19 @@ Summary:
 - Additional configurations, such as using bridges or local proxy settings, may be necessary in countries with Internet censorship.
 - Tor provides strong anonymity and ease of use, making it suitable for both legitimate and illicit purposes.
 
-- **So What’s the Big Deal?**
+**So What’s the Big Deal?**
 
 - Tor enables criminals and terrorists to communicate and conduct activities with near absolute anonymity.
 - Using webmail services with Tor hides true IP addresses, making tracing practically impossible.
 - Tor protects both innocent and criminal communications, enhancing anonymity and encryption.
 
-- **From Your Perspective**
+**From Your Perspective**
 
 - Investigating Tor involves examining devices or Internet traffic.
 - Unmasking Tor is challenging and overwhelming for investigators.
 - Legitimate and illicit uses of Tor depend on the manner of use.
 
-- **Forensic Analysis of The Onion Router**
+**Forensic Analysis of The Onion Router**
  
 - Finding the Tor browser in forensic analysis requires searching for it, often in unconventional locations.
 - Multiple versions of Tor may exist on a device, indicating prolonged usage.
@@ -93,33 +93,33 @@ Summary:
 - Despite limitations, forensic analysis of Tor provides valuable information, including historical usage.
 
 
-- **Tracking Criminals Using Tor**
+**Tracking Criminals Using Tor**
 
 - Despite its challenges, government agencies are actively working on deanonymizing Tor users.
 - A few successful cases involve exploiting errors made by suspects rather than breaking Tor itself.
 - The FBI once exploited a Firefox bug to capture IP addresses of Tor users visiting a child pornography hosting service.
 - Customization of Tor browser settings can inadvertently leak information, making users vulnerable.
 
-- **It’s Possible to Break Tor!**
+**It’s Possible to Break Tor!**
 
 - While Tor has vulnerabilities, breaking it requires significant resources and time.
 - Various methods, including attacking the Tor network or man-in-the-middle attacks, have been theorized but remain challenging.
 - Success in tracking Tor users often relies on suspects' mistakes or external factors.
 
-- **Used in Combination of Other Tools and Methods**
+**Used in Combination of Other Tools and Methods**
 
 - Tor, when combined with other security methods, enhances anonymity and communication security.
 - Tails, an operating system designed for anonymity, offers additional layers of protection and leaves no trace on the host computer.
 - Forensic analysis of Tails usage presents unique challenges due to its design to leave no trace on the host system.
 
 
-- **Related Tor Tools and Applications**
+**Related Tor Tools and Applications**
   
 - Third-party tools like the Anonabox hardware router route all Internet traffic through Tor, enhancing anonymity beyond just the Tor browser.
 - Mobile applications like Orbot enable Tor usage on smartphones, expanding the reach of anonymous communication to mobile devices.
 - Hidden services, servers on the Tor network, provide end-to-end encrypted services and are accessed with .onion URLs, making them practically invisible on the regular Internet.
 
-- **Summary**
+**Summary**
 
 - Tor is extensively used worldwide for both legitimate and illicit purposes, making it crucial for forensic investigations to consider its potential use by suspects.
 - Identifying Tor users poses significant challenges, requiring a comprehensive approach that goes beyond traditional investigative methods.
