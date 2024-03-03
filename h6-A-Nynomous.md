@@ -191,3 +191,9 @@ Hacking and security conferences that also include forums:
 [DefCon](http://g7ejphhubv5idbbu3hb3wawrs5adw7tkx7yjabnf65xtzztgg4hcsqqd.onion/)
 
 ![tor12](https://github.com/PanosArvan/Information-Security/assets/145275148/853a5487-51bb-429e-9976-0fa164810fd6)
+
+And here is a website with from a company with physical address:
+
+[CNN](http://qmifwf762qftydprw2adbg7hs2mkunac5xrz3cb5busaflji3rja5lid.onion/)
+
+![tor14](https://github.com/PanosArvan/Information-Security/assets/145275148/034e0a18-4fea-4e29-a90c-d1e8b1420769)
