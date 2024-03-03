@@ -65,11 +65,11 @@ Summary:
 
 - **From a Tor User’s Perspective**
 
--The Tor browser is a modified Firefox browser, requiring minimal technical skill to use.
--Installing the Tor browser bundle is simple, requiring about 10 mouse clicks and 10 minutes.
--Default settings are sufficient for most users, requiring minimal configuration.
--Additional configurations, such as using bridges or local proxy settings, may be necessary in countries with Internet censorship.
--Tor provides strong anonymity and ease of use, making it suitable for both legitimate and illicit purposes.
+- The Tor browser is a modified Firefox browser, requiring minimal technical skill to use.
+- Installing the Tor browser bundle is simple, requiring about 10 mouse clicks and 10 minutes.
+- Default settings are sufficient for most users, requiring minimal configuration.
+- Additional configurations, such as using bridges or local proxy settings, may be necessary in countries with Internet censorship.
+- Tor provides strong anonymity and ease of use, making it suitable for both legitimate and illicit purposes.
 
 - **So What’s the Big Deal?**
 
