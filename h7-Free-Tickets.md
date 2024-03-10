@@ -20,11 +20,11 @@ Can be used in the context of:
 
 *Face recognition through video is one of the most advanced fields within machine learning in the past few years.*
 
-1 HOG: Histogram of Oriented Gradients developed by Navneet Dalal and Bill Triggs in 2005.
+1. HOG: Histogram of Oriented Gradients developed by Navneet Dalal and Bill Triggs in 2005.
 
 Tries to detect when the dark spots in an image move and through gradients try to find patters.
 
 Has difficulty when the person is not looking in the same direction as the original tracking image.
 
-2 CNN: Convolutional Neural Network
+2. CNN: Convolutional Neural Network
 
